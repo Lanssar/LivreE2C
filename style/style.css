@@ -3,19 +3,81 @@
     src: url(./Road_Rage.otf);
 }
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 
 body {
     color: rgb(5, 70, 209);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: 'Road', sans-serif;
     background-color: rgb(0, 0, 0);
     /*background-image: url(../asset/moon-phase-header-1.jpg);*/
+    
 
 }
 
 header {
-color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    color: azure;
+    background-color: rgb(109, 15, 15);
+    height: 30vh;
+}
+
+h1, h2 {
+    width: fit-content;
+}
+
+#Logo {
+    height: 100%;
+}
+
+#titres {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    padding: 15px;
+    margin-right: 10%;
+
+}
+
+main {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+article {
+width: 60%;
+background-color: rgba(245, 246, 247, 0.171);
+padding: 30px;
+margin: 30px;
+/*border: rgb(233, 223, 223) solid 2px;*/
+border-radius: 40px;
+box-shadow: white 2px 2px 5px 0px;
+
+
+
+}
+
+ul {
+    padding: 20px;
+}
+
+#image {
+    height: 50vh;
+    width: 110%;
+    height: 50vh;
+    background-image: url(../asset/library.png);
 }
