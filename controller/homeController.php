@@ -1,20 +1,54 @@
+<?php
+    $isLogged = true;
+    $title = "silence on Lit à l'E2C";
+    $subtitle = "Lire c'est bien";
+
+    $navButtons = 
+    [
+        [
+            "label" => "Accueil",
+            "path" => "../controller/homeController.php"
+        ],
+        [
+            "label" => "Bibliothèque",
+            "path" => "../controller/libraryController.php"
+        ],
+        [
+            "label" => "Espace détente",
+            "path" => "../controller/gameController.php"
+        ],
+        [
+            "label" => "Qui sommes nous ?",
+            "path" => "../controller/usController.php"
+        ]
+    ];
+
+    if($isLogged) {
+        $navButtons[]= [
+            "label" => "Mon compte",
+            "path" => "../controller/accountController.php"
+        ];
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silence On Lit</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="module" src="../js/nav.js"></script>
 </head>
 <body>
+
+    <?php
+    require_once("../module/_header.php");
+    require_once("../module/_nav.php");
+    ?>
     
-<header>
-    <img src="./asset/logo.png" alt="LogoE2C" id="Logo">
-    <div id="titres">
-    <h1>Silence on lit à l'E2C</h1>
-    <h2>Explorer voter imaginaire</h2>
-    </div>
-</header>
 
 <main>
     <article>
@@ -44,13 +78,8 @@
     </article>
 </main>
 
-<nav>
-        <a href="./index.htm" class="bouton">Acceuil</a>
-        <a href="./page/library.htm" class="bouton">Bibliothèque</a>
-        <a href="./page/game.htm" class="bouton">Espace détente</a>
-        <a href="./page/us.htm" class="bouton">Qui sommes nous</a>
-</nav>
 
+    <div id="trigger"></div>
 
 </body>
 </html>

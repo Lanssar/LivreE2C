@@ -145,7 +145,7 @@ color: rgb(109, 15, 15);
 
 
 #trigger {
-    display: none;
+    display: block;
     position: fixed;
     top: 30vh;
     width: 7vh;
