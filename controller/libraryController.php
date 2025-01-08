@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
     //var_dump($username);
     $title = "Faites voter choix";
     $subtitle = "Y en a pout tous les gouts";
@@ -23,6 +23,13 @@
             "path" => "../controller/usController.php"
         ]
     ];
+
+    if($_SESSION["id"]) {
+        $navButtons[]= [
+            "label" => "Mon compte",
+            "path" => "../controller/accountController.php"
+        ];
+    }
 
     require_once("../view/libraryView.php")
 

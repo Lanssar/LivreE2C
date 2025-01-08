@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $title = "Mon compte";
     $subtitle = "Mes infoss à moi";
 
@@ -22,6 +22,13 @@
             "path" => "../controller/usController.php"
         ]
     ];
+
+    if($_SESSION["id"]) {
+        $navButtons[]= [
+            "label" => "Mon compte",
+            "path" => "../controller/accountController.php"
+        ];
+    }
 
     require_once("../view/accountView.php")
 ?>

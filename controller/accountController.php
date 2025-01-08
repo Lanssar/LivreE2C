@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $isLogged = true;
     
     $title = "Mon compte";
@@ -26,7 +26,7 @@ $navButtons =
 ];
 
 
-if($isLogged) {
+if(!isset($_SESSION['id'])) {
 
     require_once("../view/accountView.php");
 } else {
