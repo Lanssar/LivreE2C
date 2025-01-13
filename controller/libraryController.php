@@ -1,5 +1,11 @@
 <?php
     session_start();
+    require_once('../model/Model.php');
+
+    $bdd=new Model();
+    $bookList = $bdd->getAllBooks();
+
+    //var_dump($bookList);
     //var_dump($username);
     $title = "Faites voter choix";
     $subtitle = "Y en a pout tous les gouts";
@@ -24,7 +30,7 @@
         ]
     ];
 
-    if($_SESSION["id"]) {
+    if(isset($_SESSION["id"])) {
         $navButtons[]= [
             "label" => "Mon compte",
             "path" => "../controller/accountController.php"
